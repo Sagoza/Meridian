@@ -1,0 +1,11 @@
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\bin\Debug\Meridian.exe.config
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\bin\Debug\Meridian.exe
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\bin\Debug\Meridian.pdb
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.csprojAssemblyReference.cache
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.Form1.resources
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.Properties.Resources.resources
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.csproj.GenerateResource.cache
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.csproj.CoreCompileInputs.cache
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.exe
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.pdb
+C:\Users\SAGOZA\source\repos\Meridian\Meridian\obj\Debug\Meridian.scheduler.resources
