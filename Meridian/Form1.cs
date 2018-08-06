@@ -99,7 +99,6 @@ namespace Meridian
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             Timer Refresh = new Timer();
             Refresh.Interval = (500); // 1 secs
             Refresh.Tick += new EventHandler(Update);
@@ -115,7 +114,75 @@ namespace Meridian
         public void LogMessage(string Message) {
             logBox.Items.Insert(0, "(Local Time: " + DateTime.Now.ToString("HH:mm:ss tt") + "): " + Message);
         }
-        
+
+        public struct Coordinates {
+            int x;
+            int y;
+        }
+
+        Village TestVillage;
+
+        public struct Village {
+            public int accID;
+            public string villageName;
+
+            public Coordinates currentVillageCoords;
+
+            public int village;
+            public int wood_prod;
+            public int stone_prod;
+            public int iron_prod;
+
+            public int wood;
+            public int stone;
+            public int iron;
+
+            public int statue; // Estatua
+            public int hide; // Esconderijo
+            public int wall; // Muralha
+            public int stable; // Estabulo
+            public int market; // Mercado
+            public int smith; // Ferreiro
+            public int barracks; // Quartel
+            public int storage; // Armazem
+            public int farm; // Fazenda
+            public int main; // Edificio Principal
+        }
+
+        public void AssignVillage(Village village, string escapedString) {
+            string buildings;
+
+            buildings = ReturnSelectiveRange(escapedString, "buidings", '}');
+
+            village.main = AssignIntVariable(buildings, "main");
+        }
+        public int AssignIntVariable(string escapedString, string startWord) {
+            int startIndex = escapedString.IndexOf(startWord);
+            int selection = 0;
+
+            for (int i = startIndex + startWord.Length + 3; i < escapedString.Length; i++)
+            {
+                if (escapedString[i].Equals('"')) // StartSeparator
+                {
+                    selection += escapedString[i]; //String Concat Char  
+                    return selection;
+                }
+                else
+                {
+                    selection += escapedString[i]; //String Concat Char  
+                }
+            }
+            return -1;
+        }
+        //public string AssignStringVariable(string escapedString, string var)
+        //{
+
+        //}
+        //public Coordinates AssignCoordinatesVariable(string escapedString, string var)
+        //{
+
+        //}s
+
         private void button1_Click(object sender, EventArgs e)
         {
             string indexWord = "TribalWars.updateGameData";
@@ -138,7 +205,8 @@ namespace Meridian
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LogMessage("Village Number: " + test());
+            AssignVillage(TestVillage, ReturnSelectiveRange("", ))
+            LogMessage("Village Number: ");
         }
 
         public void Upgrade() {
@@ -166,26 +234,7 @@ namespace Meridian
             return "-1";
         }
 
-        public string test() {
-            string text = "randomGiberish?dasd&dfas@village=14526&dasdasda";
-
-            int startindex = text.IndexOf("village=");
-
-            string villageNumber = " ";
-
-            for (int i = startindex + 8; i < text.Length; i++)
-            {
-                if (text[i].Equals('&')) // End Separator
-                {
-                    return villageNumber;
-                }
-                else
-                {
-                    villageNumber += text[i]; //String Concat Char                
-                }
-            }
-            return "-1";
-        }
+        
 
         public void Logout() {
             WebInstance.Navigate("https://www.tribalwars.com.pt/page/logout");

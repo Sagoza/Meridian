@@ -52,6 +52,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.timePicker0 = new System.Windows.Forms.DateTimePicker();
             this.villagers = new System.Windows.Forms.Label();
@@ -60,15 +61,14 @@
             this.iron = new System.Windows.Forms.Label();
             this.wood = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.world)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.gameTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -87,7 +87,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(910, 595);
+            this.webBrowser1.Size = new System.Drawing.Size(910, 547);
             this.webBrowser1.TabIndex = 1;
             this.webBrowser1.Url = new System.Uri("https://www.tribalwars.com.pt/", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.WebInstance_DocumentCompleted);
@@ -140,7 +140,7 @@
             // 
             this.logBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.logBox.FormattingEnabled = true;
-            this.logBox.Location = new System.Drawing.Point(0, 689);
+            this.logBox.Location = new System.Drawing.Point(0, 641);
             this.logBox.Name = "logBox";
             this.logBox.Size = new System.Drawing.Size(1145, 108);
             this.logBox.TabIndex = 6;
@@ -270,7 +270,7 @@
             this.tabControl1.Location = new System.Drawing.Point(6, 56);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(924, 627);
+            this.tabControl1.Size = new System.Drawing.Size(924, 579);
             this.tabControl1.TabIndex = 13;
             // 
             // gameTab
@@ -279,7 +279,7 @@
             this.gameTab.Location = new System.Drawing.Point(4, 22);
             this.gameTab.Name = "gameTab";
             this.gameTab.Padding = new System.Windows.Forms.Padding(3);
-            this.gameTab.Size = new System.Drawing.Size(916, 601);
+            this.gameTab.Size = new System.Drawing.Size(916, 553);
             this.gameTab.TabIndex = 0;
             this.gameTab.Text = "Game Tab";
             this.gameTab.UseVisualStyleBackColor = true;
@@ -319,6 +319,10 @@
             this.name.HeaderText = "Name";
             this.name.Name = "name";
             // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(Meridian.Account);
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -335,7 +339,7 @@
             this.groupBox2.Controls.Add(this.isLoggedIn);
             this.groupBox2.Location = new System.Drawing.Point(936, 56);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 627);
+            this.groupBox2.Size = new System.Drawing.Size(200, 579);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Debug";
@@ -404,15 +408,11 @@
             this.time.Text = "Time:";
             this.time.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(Meridian.Account);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 797);
+            this.ClientSize = new System.Drawing.Size(1145, 749);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
@@ -427,9 +427,9 @@
             this.gameTab.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
